@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: testing-application
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:file:./data/persondb
+    username: user
+    password: pass
+    driver-class-name: org.h2.Driver  
+    
+    hikari:
+      maximum-pool-size: 10
+  h2:
+    console:
+      enabled: true
+      path: /database
